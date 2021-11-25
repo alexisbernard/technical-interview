@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_160903) do
+ActiveRecord::Schema.define(version: 2021_11_25_161541) do
+
+  create_table "credit_cards", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.date "expired_on", null: false
+    t.string "token", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_credit_cards_on_user_id"
+  end
 
   create_table "payments", force: :cascade do |t|
     t.integer "subscription_id", null: false
@@ -50,6 +59,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_160903) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "credit_cards", "users"
   add_foreign_key "payments", "subscriptions"
   add_foreign_key "subscriptions", "plans"
   add_foreign_key "subscriptions", "users"
