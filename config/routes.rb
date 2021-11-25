@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :payments
-  resources :subscriptions
   resources :users
+  resources :subscriptions
+  resources :payments
 
   root "users#index"
 end
