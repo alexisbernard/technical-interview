@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Payment</h1>
+
+<table>
+  <tr>
+    <th><%= User.model_name.human %></th>
+    <th><%= Payment.human_attribute_name :type %></th>
+    <th><%= Payment.human_attribute_name :amount %></th>
+  </tr>
+  <% for payment in @payments %>
+    <tr>
+      <td><%= payment.subscription.user.name %></td>
+      <td><%= payment.type %></td>
+      <td><%= payment.amount %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New payment", new_payment_path %>

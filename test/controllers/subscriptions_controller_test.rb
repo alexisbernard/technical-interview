@@ -41,6 +41,7 @@ class SubscriptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy subscription" do
+    @subscription.payment.destroy
     assert_difference("Subscription.count", -1) do
       delete subscription_url(@subscription)
     end

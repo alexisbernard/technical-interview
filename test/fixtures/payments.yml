@@ -1,0 +1,4 @@
+alice:
+  type: Payment::Transfer
+  subscription: alice
+  amount: 10
