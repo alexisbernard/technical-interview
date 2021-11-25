@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User</h1>
+
+<table>
+  <tr>
+    <th><%= User.human_attribute_name :name %></th>
+    <th><%= User.human_attribute_name :email %></th>
+  </tr>
+  <% for user in @users %>
+    <tr>
+      <td><%= link_to user.name, user %></td>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New user", new_user_path %>
