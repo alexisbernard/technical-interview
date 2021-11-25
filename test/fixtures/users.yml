@@ -2,3 +2,8 @@ alice:
   name: Alice
   email: alice@test.com
   password_digest: "$2a$10$.nseyfaWpDztC4ciFu7IMOX5MSYt.5MrKdd98Gyq6Az2WBYsLtxmW" # => password
+
+bob:
+  name: Bob
+  email: bob@test.com
+  password_digest: "$2a$10$.nseyfaWpDztC4ciFu7IMOX5MSYt.5MrKdd98Gyq6Az2WBYsLtxmW" # => password

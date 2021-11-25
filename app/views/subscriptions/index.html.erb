@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Subscription</h1>
+
+<table>
+  <tr>
+    <th><%= User.model_name.human %></th>
+    <th><%= Subscription.human_attribute_name(:start_on) %></th>
+    <th><%= Subscription.human_attribute_name(:end_on) %></th>
+    <% for subscription in @subscriptions %>
+      <tr>
+        <td><%= link_to subscription.user.name, subscription %></td>
+        <td><%= l subscription.start_on %></td>
+        <td><%= l subscription.end_on %></td>
+      </tr>
+    <% end %>
+</table>
+
+<%= link_to "New subscription", new_subscription_path %>

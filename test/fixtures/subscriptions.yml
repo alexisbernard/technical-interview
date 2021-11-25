@@ -1,0 +1,5 @@
+alice:
+  user: alice
+  start_on: <%= Date.today %>
+  end_on: <%= Date.tomorrow %>
+  renew_on: <%= Date.tomorrow %>
