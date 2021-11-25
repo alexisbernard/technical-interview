@@ -1,5 +1,6 @@
 alice:
   user: alice
+  plan: digital
   start_on: <%= Date.today %>
   end_on: <%= Date.tomorrow %>
   renew_on: <%= Date.tomorrow %>

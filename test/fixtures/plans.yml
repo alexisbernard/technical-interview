@@ -1,0 +1,7 @@
+digital:
+  name: Digital
+  price: 10
+
+explorer:
+  name: Explorer
+  price: 20

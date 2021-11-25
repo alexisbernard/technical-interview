@@ -65,6 +65,6 @@ class SubscriptionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def subscription_params
-    params.fetch(:subscription).permit(:user_id, :start_on, :end_on, :renew_on)
+    params.fetch(:subscription).permit(:user_id, :plan_id, :start_on, :end_on, :renew_on)
   end
 end

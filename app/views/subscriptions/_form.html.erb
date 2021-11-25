@@ -14,6 +14,9 @@
   <%= form.label :user_id %>
   <%= form.select :user_id, options_from_collection_for_select(User.all, :id, :name, subscription.user_id), include_blank: true %>
 
+  <%= form.label :plan_id %>
+  <%= form.select :plan_id, options_from_collection_for_select(Plan.all, :id, :name, subscription.plan_id), include_blank: true %>
+
   <%= form.label :start_on %>
   <%= form.date_field :start_on %>
 

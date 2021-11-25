@@ -17,8 +17,9 @@ class SubscriptionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create subscription" do
     bob = users(:bob)
+    digital = plans(:digital)
     assert_difference("Subscription.count") do
-      post subscriptions_url, params: { subscription: { user_id: bob.id, start_on: Date.today, end_on: Date.tomorrow, renew_on: Date.tomorrow } }
+      post subscriptions_url, params: { subscription: { user_id: bob.id, plan_id: digital.id, start_on: Date.today, end_on: Date.tomorrow, renew_on: Date.tomorrow } }
     end
 
     assert_redirected_to subscription_url(Subscription.last)
