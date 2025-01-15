@@ -13,7 +13,8 @@
     <p>
       <%= link_to User.model_name.human, users_path %> |
       <%= link_to Subscription.model_name.human, subscriptions_path %> |
-      <%= link_to Payment.model_name.human, payments_path %>
+      <%= link_to Payment.model_name.human, payments_path %> |
+      <%= link_to Article.model_name.human, articles_path %>
     </p>
     <%= yield %>
   </body>
